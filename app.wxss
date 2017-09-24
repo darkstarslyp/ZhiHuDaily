@@ -1,0 +1,9 @@
+/**app.wxss**/
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: strecth;
+  justify-content: flex-start;
+  padding: 0rpx 0;
+  box-sizing: border-box;
+} 

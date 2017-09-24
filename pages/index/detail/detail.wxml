@@ -1,0 +1,10 @@
+<!--pages/index/detail/detail.wxml-->
+<view class="container">
+    <view class="container-header">
+ <image  class="detail-image" wx:if="{{detailData.image}}" src="{{detailData.image}}"/>
+        <text class="detail-title">{{detailData.title}}</text>
+    </view>
+    <view class="container-content">
+      <text class="article-content">{{detailData.body}}</text>
+    </view>
+</view>

@@ -1,0 +1,20 @@
+/* pages/index/detail/detail.wxss */
+.container-header{
+    width: 100%;
+    height:300px;
+    flex-direction: column;
+    display: flex;
+}
+
+.detail-image{
+    width: 100%;
+    height:100%;
+}
+
+.detail-title{
+   position: absolute;
+   width: 90%;
+   align-self: center;
+   top: 400rpx;
+   color: #fff;
+}

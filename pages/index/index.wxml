@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- banner satrt-->
+  <swiper 
+    class="banners"
+    indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" 
+    interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{bannerData}}">
+      <swiper-item class="banner" >
+        <image  wx:if="{{item.image}}" src="{{item.image}}" data-id="{{item.id}}" class="banner-image" bindtap="bannerDetail"/>
+        <text   class="banner-title">{{item.title}}</text>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- banner end-->
+
+  <!-- list start-->
+  <view class="news_list_container">
+      <block wx:for="{{list}}" >
+         <text class="header" wx:if="{{item.header}}">{{item.header}}</text>
+          <navigator wx:else open-type="navigate" url="detail/detail?id={{item.id}}">
+            <view class="news_item_contianer" >
+                <text class="news-item-title">{{item.title}}</text>
+                <image wx:if="{{item.images[0]}}" src="{{item.images[0]}}" class="news-item-image"/>
+            </view>
+          </navigator>
+      </block>
+      <button class="btnLoadMore" loading='{{loading}}' bindtap="loadMore">更多</button>
+  </view>
+  <!-- list end-->
+
+</view>
